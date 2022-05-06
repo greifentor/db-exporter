@@ -1,0 +1,23 @@
+@startuml
+
+component service {
+
+	component DBExportScriptGenerator
+
+}
+
+component console {
+
+	component ExportScriptCreator
+
+	component DataModelToDBExportModelConverter
+	
+	component ScriptWriter
+	
+	ExportScriptCreateCommand -DOWN-> DataModelToDBExportModelConverter
+	ExportScriptCreateCommand -DOWN-> ScriptWriter
+	ExportScriptCreateCommand -DOWN-> DBExportScriptGenerator
+
+}
+
+@enduml

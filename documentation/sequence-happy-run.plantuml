@@ -1,0 +1,11 @@
+@startuml
+
+ExportScriptCreateCommand -> DataModelToDBExportModelConverter : convert(dataModel)
+ExportScriptCreateCommand <-- DataModelToDBExportModelConverter : dbExportModel
+
+ExportScriptCreateCommand -> DBExportScriptGenerator : generateExportScriptFor(dbExportModel)
+ExportScriptCreateCommand <-- DBExportScriptGenerator : scriptModel
+
+ExportScriptCreateCommand -> ScriptWriter : createScript(scriptModel)
+
+@enduml

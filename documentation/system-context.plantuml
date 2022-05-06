@@ -1,0 +1,14 @@
+@startuml
+
+actor User
+
+node DBExport
+
+node DataModel
+
+User --> DBExport :Console
+
+DBExport --> DataModel
+
+
+@enduml
