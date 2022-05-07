@@ -11,7 +11,7 @@ public class DBExporterScriptGeneratorImpl implements DBExporterScriptGenerator 
 
 	@Override
 	public ScriptModel generateExportScriptFor(DBExporterModel dbExporterModel) {
-		return null;
+		return new ScriptModel();
 	}
 
 }
